@@ -1,0 +1,4 @@
+<p class="mat-h3">Animation</p>
+
+<button mat-raised-button color="accent" (click)="fadeInOut()">fade in / out</button>
+<div [@fadeInOut]="isShown ? 'open' : 'close'" class="mat-h1">Hello, world!</div>

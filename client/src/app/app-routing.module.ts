@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'help', component: HelpComponent },
   { path: 'material-theme', loadChildren: () => import('./modules/material-theme/material-theme.module').then(m => m.MaterialThemeModule) },
+  { path: 'animation', loadChildren: () => import('./modules/animation/animation.module').then(m => m.AnimationModule) },
 ];
 
 @NgModule({
