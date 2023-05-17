@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@use '@angular/material' as mat;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+$primary-palette: mat.define-palette(mat.$pink-palette);
+$accent-palette: mat.define-palette(mat.$blue-palette);
+
+.weak {
+    color: mat.get-color-from-palette($primary-palette, 500, .25);
+}
+
+// define colors
+$colors: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
+@each $color in $colors {
+    .primary-#{$color} {
+        color: mat.get-color-from-palette($primary-palette, $color);
+    }
+    .accent-#{$color} {
+        color: mat.get-color-from-palette($accent-palette, $color);
+    }
+}
+
+
+// an array of pixels
+$pixels: 5px, 10px, 20px, 50px, 100px, 200px;
+
+@each $pixel in $pixels {
+    .padding-#{$pixel} {
+        padding: $pixel;
+    }
+}
+
