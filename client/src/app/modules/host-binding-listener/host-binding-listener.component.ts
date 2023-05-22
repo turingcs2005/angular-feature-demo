@@ -5,7 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './host-binding-listener.component.html',
   styleUrls: ['./host-binding-listener.component.scss']
 })
-export class HostBindingListenerComponent {
-  msg = 'Hello, world!';
-
-}
+export class HostBindingListenerComponent {}
