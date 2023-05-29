@@ -1,0 +1,30 @@
+$border-color: #979797;
+$text-color: #38424c;
+$label-color: #db202f;
+
+.dropzone {
+    width: 450px;
+    height: 200px;
+    padding: 2rem;
+    text-align: center;
+    border: dashed 1px $border-color;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 20px;
+    cursor: grabbing;
+
+    input {
+        display: none;
+    }
+
+    h3 {
+        font-size: 20px;
+        font-weight: 600;
+        color: $text-color;
+    }
+}
+
+.grey-icon {
+    color: $border-color;
+}
+

@@ -1,0 +1,14 @@
+<!-- A user uploads an array of files by either
+    1. drag and drop files
+    2. click a button to select files -->
+
+<div class="dropzone" appDragAndDrop (fileDropped)="onFileDropped($event)">
+
+    <mat-icon class="magnification-x2 grey-icon">cloud_upload</mat-icon> <br> <br>
+    <h3>Drag and Drop Files <br> or</h3>
+
+    <input type="file" #fileSelector id="fileSelector" multiple (change)="onFileSelected($event)">
+    <button mat-fab color="primary" (click)="fileSelector.click()">
+        <mat-icon>attach_file</mat-icon>
+    </button>
+</div>

@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: 'material-theme', loadChildren: () => import('./modules/material-theme/material-theme.module').then(m => m.MaterialThemeModule) },
   { path: 'animation', loadChildren: () => import('./modules/animation/animation.module').then(m => m.AnimationModule) },
   { path: 'host-binding-listener', loadChildren: () => import('./modules/host-binding-listener/host-binding-listener.module').then(m => m.HostBindingListenerModule) },
+  { path: 'file-upload', loadChildren: () => import('./modules/file-upload/file-upload.module').then(m => m.FileUploadModule) },
 ];
 
 @NgModule({

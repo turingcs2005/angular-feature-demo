@@ -35,9 +35,12 @@ import { OverlayModule } from '@angular/cdk/overlay';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DragAndDropDirective } from './drag-and-drop.directive';
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    DragAndDropDirective
+  ],
   imports: [
     CommonModule
   ],
@@ -75,7 +78,9 @@ import { HttpClientModule } from '@angular/common/http';
 
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+
+    DragAndDropDirective
   ]
 })
 export class SharedModule { }

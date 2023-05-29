@@ -22,7 +22,6 @@ $colors: 50, 100, 200, 300, 400, 500, 600, 700, 800, 900;
     }
 }
 
-
 // an array of pixels
 $pixels: 5px, 10px, 20px, 50px, 100px, 200px;
 
@@ -32,3 +31,38 @@ $pixels: 5px, 10px, 20px, 50px, 100px, 200px;
     }
 }
 
+$magnification: (
+    x1: 1, 
+    x2: 2, 
+    x3: 3, 
+    x4: 4, 
+    x5: 5
+);
+
+@each $name, $time in $magnification {
+    .magnification-#{$name} {
+        transform: scale($time);
+    };
+}
+
+.wiggle {
+    // whiggle for 0.5 seconds
+    animation: shake 0.5s;
+
+    // once animation finishes, start again
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
